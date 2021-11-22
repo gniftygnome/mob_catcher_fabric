@@ -36,7 +36,8 @@ public class ItemMobCatcherHostile extends Item
     {
         if(!player.world.isClient)
         {
-            if(stack.getOrCreateNbt().isEmpty() && (entity instanceof HostileEntity && !(entity instanceof WitherEntity)))
+            if(stack.getOrCreateNbt().isEmpty() &&
+                    (entity instanceof HostileEntity && !(entity instanceof WitherEntity)))
             {
                 if(CatcherUtil.saveEntityToStack(entity, stack))
                 {

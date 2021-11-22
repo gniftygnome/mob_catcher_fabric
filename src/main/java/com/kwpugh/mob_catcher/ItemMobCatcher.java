@@ -8,6 +8,7 @@ import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.boss.WitherEntity;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -60,7 +61,7 @@ public class ItemMobCatcher extends Item
                             entity instanceof SquidEntity ||
                             entity instanceof FishEntity ||
                             entity instanceof VillagerEntity) ||
-                    entity instanceof WanderingTraderEntity)
+                            entity instanceof WanderingTraderEntity)
             {
                 if(CatcherUtil.saveEntityToStack(entity, stack))
                 {
